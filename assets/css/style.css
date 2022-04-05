@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --text-blue: #1e1f36;
+  --text-orange: #f47c57;
+  --text-dark: #4a4b5e;
+  --text-light: #787887;
+
+  --bg-purple: #af67e9;
+  --bg-blue: #6565e7;
+  --bg-light: #fff;
+
+  --divider: #e7e7e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg-purple) 0%, var(--bg-blue) 100%);
+  color: var(--text-blue);
+  font-family: 'Kumbh Sans', sans-serif;
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 1.125rem 0;
+}
+
+.container {
+  position: relative;
+}
+
+/* card */
+.card {
+  background: var(--bg-light) url('../images/bg-pattern-mobile.svg') no-repeat
+    center top;
+  border-radius: 1.5rem;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
+  padding: 8.25rem 1.5rem 3rem;
+  width: 327px;
+}
+
+.card__img {
+  background-image: url('../images/illustration-woman-online-mobile.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  width: 237px;
+
+  position: relative;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+}
+
+/* dropdown items */
+.dropdown .dropdown__title {
+  margin-bottom: 2.375rem;
+  text-align: center;
+}
+
+.dropdown__item .trigger {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.dropdown__item .trigger:hover {
+  color: var(--text-orange);
+}
+
+.dropdown__item .trigger img {
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.dropdown__item .content {
+  color: var(--text-light);
+  font-size: 12px;
+  height: 0;
+  line-height: 18px;
+  margin-right: 2rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* active dropdown items */
+.dropdown__item.active .content {
+  display: block;
+  height: auto;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+.dropdown__item.active .trigger span {
+  font-weight: 700;
+}
+
+.dropdown__item.active .trigger img {
+  transform: rotate(180deg);
+}
+
+/* footer */
+.attribution {
+  color: var(--text-blue);
+  font-size: 11px;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--text-orange);
+}
+
+/* media queries */
+@media (min-width: 1024px) {
+  .card {
+    background-image: url('../images/illustration-woman-online-desktop.svg'),
+      url('../images/bg-pattern-desktop.svg');
+    background-position: -90px center, -580px -320px;
+    background-repeat: no-repeat;
+    background-size: contain cover;
+
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    width: 920px;
+  }
+
+  .card__img {
+    background-image: url('../images/illustration-box-desktop.svg');
+    position: absolute;
+    left: 0px;
+    top: 180px;
+    width: 140px;
+  }
+
+  .dropdown {
+    padding: 4rem 6rem 5.125rem 4rem;
+    width: 532px;
+  }
+
+  .dropdown .dropdown__title {
+    text-align: start;
+  }
+}
