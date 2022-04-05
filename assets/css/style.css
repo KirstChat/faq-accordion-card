@@ -23,7 +23,6 @@ body {
   background: linear-gradient(180deg, var(--bg-purple) 0%, var(--bg-blue) 100%);
   color: var(--text-blue);
   font-family: 'Kumbh Sans', sans-serif;
-  margin-bottom: 2.5rem;
 
   display: flex;
   flex-direction: column;
@@ -119,7 +118,7 @@ hr {
 .attribution {
   color: var(--text-blue);
   font-size: 11px;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
   text-align: center;
 }
 .attribution a {
@@ -139,13 +138,14 @@ hr {
     justify-content: end;
     padding: 0;
     width: 920px;
+    height: 509px;
   }
 
   .card__img {
     background-image: url('../images/illustration-box-desktop.svg');
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 210px;
     width: 140px;
   }
 
